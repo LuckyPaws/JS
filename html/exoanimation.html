@@ -1,0 +1,104 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/exoanimation.css">
+    <title>Animation JQUERY</title>
+</head>
+<body>
+
+    <h1>Exercice d'animations a l'aide de Jquery</h1>
+
+    
+    <button id="cacher">Cacher le rectangle</button>
+
+    <button id="">Afficher le rectangle</button>
+
+    </br> 
+</br>
+
+    <div id="rectangle">
+        
+    </div>
+
+    
+
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+
+        $("#cacher").click(function () {
+
+        $("#rectangle").slideUp(2000)
+
+        });
+
+        $("#afficher").click(function () {
+
+        $("#rectangle").slideUp(2000)
+
+        });
+
+    </script>
+</body>
+</html> -->
+
+<!--Version corrigé-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo Jour 9 : Jquery Animation</title>
+</head>
+<body>
+    <style>
+        #rectangle, #rectangle2 {
+            width : 100px;
+            height : 100px;
+            background-color: red;
+        }
+        #une, #deux
+        {
+            font-size: 24px;
+        }
+    </style>
+    <h1>Exo Jour 9</h1>
+    <h2>Jquery Animation</h2>
+    <div id="rectangle"></div>
+    <br>
+    <button id="animate">Animate !</button>
+    <br>
+    <br>
+    <div id="rectangle2"></div>
+    <br>
+    <button id="animate2">Inflate!</button>
+    <br>
+    <br>
+    <div id="une">DIV NUMERO 1</div>
+    <div id="deux">DIV NUMERO 2</div>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        // EXO 2
+        $(function()
+        {
+            let nombreFois = 1;
+            $("#animate2").click(function(){
+                let hauteur = $("#rectangle2").height();
+                let largeur = $("#rectangle2").width();
+                $("#rectangle2").animate({
+                    height: hauteur * 1.2 + 'px',
+                    width: largeur * 1.2 + 'px',
+                }, "slow", function(){
+                    nombreFois ++;
+                    console.log("Animation complete");
+                    if (nombreFois <= 5)
+                        $("#animate2").trigger('click');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

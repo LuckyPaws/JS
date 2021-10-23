@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript : Exercice</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <h1>Titre</h1>
+        <div>
+            <div>
+                <h2 id="h2">Titre 1</h2>
+                <div>
+                    <p>paragraphe <a href="#"><span>1.1</span></a></p>
+                    <p>paragraphe <a href="#"><span>1.2</span></a></p>
+                    <p>paragraphe <a href="#"><span>1.2</span></a></p>
+                </div>
+            </div>
+            <div>
+                <h2>Titre 2</h2>
+                <div>
+                    <p>paragraphe <a href="#"><span>2.1</span></a></p>
+                    <p>paragraphe <a href="#"><span>2.2</span></a></p>
+                    <p>paragraphe <a href="#"><span>2.3</span></a></p>
+                </div>
+            </div>
+        </div>
+        <noscript>
+            <p>Veuillez activer JavaScript</p>
+        </noscript>
+        <script>
+
+            addEventListener('load', () => {
+                setInterval(() => {
+                    document.querySelector('#h2').style.marginLeft = parseInt((window.getComputedStyle(document.querySelector('#h2')).marginLeft), 10) + 2 + "px"
+                }, 200)
+            }, {once: true})
+
+        </script>
+    </body>
+</html>

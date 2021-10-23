@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript : Exercice 18</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <link rel="stylesheet" href="../css/exemple15.css">
+
+		<script type="text/javascript"> 
+			
+
+		</script>
+	</head>
+	<body>
+		<h1>Exercice JSON</h1>
+
+
+        <script>
+            
+            let courses = Information();
+
+            console.log(courses);
+
+            console.log(courses.kiwis);
+
+            console.log(courses.liste.viande);
+
+            console.log(courses.demande);
+
+            // Parcours de la partie de tableau demande
+
+            for(i=0; i<courses.demande.length; i++) {
+                console.log(courses.demande[i]);
+            }
+
+            for(i=0; i<courses.data.length; i++) {
+                console.log(courses.data[i]["id"] + " - " + courses.data[i]["name"]);
+            }
+
+            // Autres fonctions d'accès (via les clés et les valeurs)
+
+            const cles = Object.keys(courses);
+            console.log(cles);
+
+            const valeur_cles = Object.values(courses);
+            console.log(valeur_cles);
+
+            // Crée un tableau de tableau (le premier = clé, le 2eme = les valeurs)
+
+            const tab_cles = Object.entries(courses);
+            console.log(tab_cles);
+
+            // Parcours d'un objet
+
+            for ( let propriete in courses) {
+                console.log(`${propriete} : ${courses[propriete]}`)
+            }
+
+
+            function Information() {
+
+                    return {
+
+
+                    "data" : [
+                        { "id":"1","name":"Un"},
+                        { "id":"2","name":"Deux"},
+                        { "id":"3","name":"Trois"},
+                        { "id":"4","name":"Quatre"},
+                        { "id":"5","name":"Cinq" }
+                    ],
+                    "kiwis"  : 4,
+                    "pommes" : 5,
+                    "liste"  : {
+                        "oeufs" : 5,
+                        "viande" : "porc"
+                    },
+
+                    "demande" : [
+                        { "kinder" : 5,
+                        "carotte" : 6,
+                        "glace" : 1 
+                        },
+                        {
+                        "croissant" : 10
+                        }
+                    ]
+
+                }
+
+            }
+
+        </script>
+	</body>
+</html>

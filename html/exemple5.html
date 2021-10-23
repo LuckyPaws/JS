@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+            <!--Exemple enrichi avec un switch-->
+<p name="paragraphe">This example uses the addEventListener() method to attach a click event to the document.</p>
+
+<p name="paragraphe">Click anywhere in the document.</p>
+
+<p><strong>Note:</strong> The addEventListener() method is not supported in Internet Explorer 8 and earlier versions.</p>
+
+<button onclick="maFonction()">Test de bouton</button>
+
+<p id="demo"></p>
+
+<script>
+
+    let x = document.getElementsByTagName("P");
+
+    for(let i=0; i< x.length; i++)
+    {
+        x[i].addEventListener("click", function() {
+            document.getElementById("demo").innerHTML = "Hello World (via listener) ! - " + i;
+            switch(i)
+            {
+                case 0:
+                    document.getElementById("demo").style.color = "green";
+                    break;
+                case 1:
+                    document.getElementById("demo").style.color = "red";
+                    break;
+                case 2:
+                    document.getElementById("demo").style.color = "blue";
+                    break;
+                default:
+                    document.getElementById("demo").style.color = "yellow";
+                    break;
+            }
+     });
+    }
+
+
+// document.addEventListener("click", function(){
+//  document.getElementById("demo").innerHTML = "Hello World!";
+// });
+
+function maFonction() {
+    document.getElementById("demo").innerHTML = "Deuxième essai avec appui sur le bouton";
+}
+
+
+</script>
+
+</body>
+</html>

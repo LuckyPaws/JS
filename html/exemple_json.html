@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript : Exercice 18</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <link rel="stylesheet" href="../css/exemple15.css">
+
+        <script type="text/javascript"> 
+
+
+        </script>
+    </head>
+    <body>
+        <h1>Exercice JSON</h1>
+
+
+        <script>
+
+            let courses = {
+                "kiwis"  : 4,
+                "pommes" : 5,
+                "liste"  : {
+                    "oeufs" : 5,
+                    "viande" : "porc"
+                },
+
+                "demande" : [
+                    { "kinder" : 5,
+                      "carotte" : 6,
+                      "glace" : 1 
+                    },
+                    {
+                      "croissant" : 10
+                    }
+                ]
+
+            }
+
+            console.log(courses);
+
+            console.log(courses.kiwis);
+
+            console.log(courses.liste.viande);
+
+            console.log(courses.demande);
+
+            for(i=0; i<=courses.demande.length; i++) {
+                console.log(courses.demande[i]);
+            }
+
+        </script>
+    </body>
+</html>

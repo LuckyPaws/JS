@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Manipulation de l'attribut class</title>
+    <style type="text/css">
+    .rouge{color:red;}
+    .vert{color:green;}
+    .petit{font-size:100%;}
+    .grand{font-size:250%;}
+    </style>
+</head>
+<body>
+    <span id="jean" class="rouge grand">Jean</span>
+    <span id="pierre">Pierre</span>
+    <span id="paul" class="vert grand">Paul</span>
+    <span id="julia">Julia</span>
+    <span id="eric" class="vert">Eric</span>
+    <span id="kevin">Kevin</span>
+
+    <br>
+
+
+    <p id="test_jean"></p>
+
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            
+            let result = $("#result");
+            
+            $("#julia").addClass("rouge");
+
+            $("#pierre").addClass("vert").addClass("grand");
+
+            $("#eric").removeClass("vert").addClass("rouge");
+
+            //$("#paul").removeClass("vert").removeClass("grand").addClass("rouge").addClass("petit");
+
+            $("#paul").toggleClass("vert grand", false).toggleClass("rouge petit", true);
+
+            //$("#jean").removeClass("rouge");        //ligne pour tester si mon if et else réagisse correctement
+
+            if ($("#jean").hasClass("rouge"))
+                $("#test_jean").text("Oui il possède la class rouge");
+            else
+                $("#test_jean").text("Non il ne possède pas la class rouge");
+
+        });
+        
+    </script>
+</body>
+</html>

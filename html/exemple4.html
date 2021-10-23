@@ -1,0 +1,40 @@
+Exemple de 3 (avec addlistener)
+<!DOCTYPE html>
+<html>
+<body>
+
+<p name="paragraphe">This example uses the addEventListener() method to attach a click event to the document.</p> <!--on met un nom au paragraphe-->
+
+<p name="paragraphe">Click anywhere in the document.</p>
+
+<p><strong>Note:</strong> The addEventListener() method is not supported in Internet Explorer 8 and earlier versions.</p>
+
+<button onclick="maFonction()">Test de bouton</button> <!--Quand on clique sur le bouton sa execute la fonction-->
+
+<p id="demo"></p> <!--Affichage-->
+
+<script>
+
+    let x = document.getElementsByTagName("P"); //variable x qui recupère l'element p
+
+    for(let i=0; i< x.length; i++)
+    {
+        x[i].addEventListener("click", function(){
+            document.getElementById("demo").innerHTML = "Hello World (via listener) !"; //peut importe ou on clique sur la page sa affiche le hello world
+     });
+    }
+
+
+// document.addEventListener("click", function(){
+//  document.getElementById("demo").innerHTML = "Hello World!";
+// });
+
+function maFonction() {
+    document.getElementById("demo").innerHTML = "Deuxième essai avec appui sur le bouton";
+}
+
+
+</script>
+
+</body>
+</html>

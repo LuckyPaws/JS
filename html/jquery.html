@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+</head>
+<body>
+    <a href="http://jquery.com/">jQuery</a>
+
+    <div id="wrapper">
+
+    <h1>Exercice Jquery</h1>
+
+    <p>blablablabla</p>
+
+    <ul>
+        <li>Element 1</li>
+        <li>Element 2</li>
+        <li>Element 3</li>
+    </ul>
+
+    </div>
+
+    <!-- <span>text balise span1</span>
+
+    <div id="div-1">
+        
+        Mon texte
+
+        <span>Text balise span 2</span>
+    
+    </div> -->
+
+
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+
+    // $("h1").css("text-transform", "uppercase",);        //Met le titre en majuscule
+
+    // $("li").first().css("color", "red");        //met le premier element de la liste en rouge
+
+    //Autre façon de faire
+
+    // $("#wrapper > h1").css ( {"text-transform": "uppercase"} );
+    // $("li:first").css( {"color": "red"} );
+    
+//-----------------------------------------------------------------------
+
+
+    // $ ( document ).ready(function () {
+
+    //     //alert("Welcome");
+
+    //     $("a").click(function(event) {
+    //         alert("Thanks for visiting! ");
+
+    //         event.preventDefault();  //annule la reference
+    //     });
+
+    //     // let myDiv = $('#div-1');
+
+    //     // alert(myDiv.html());
+
+    //     $('#div-1').click( function (event) {
+
+    //         $('span', this).click( function(event) {
+
+           
+
+    //         console.log($('++' + this));
+
+    //     } );
+
+    //     });
+
+    // });
+
+
+    let mon_objet = { parametre1 : "1111", parametre2: "2222"};
+
+            console.log(mon_objet);
+            console.log(mon_objet.parametre1);
+
+            let $mon_objet = $(mon_objet);
+
+            console.log($mon_objet);
+
+            console.log($mon_objet.prop("parametre1"));
+
+ 
+    </script>
+</body>
+</html>
